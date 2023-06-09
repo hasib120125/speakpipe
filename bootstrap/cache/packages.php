@@ -1,4 +1,30 @@
 <?php return array (
+  'arcanedev/log-viewer' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Arcanedev\\LogViewer\\LogViewerServiceProvider',
+      1 => 'Arcanedev\\LogViewer\\Providers\\DeferredServicesProvider',
+    ),
+  ),
+  'intervention/image' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Intervention\\Image\\ImageServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Image' => 'Intervention\\Image\\Facades\\Image',
+    ),
+  ),
+  'kirschbaum-development/eloquent-power-joins' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Kirschbaum\\PowerJoins\\PowerJoinsServiceProvider',
+    ),
+  ),
   'laravel/sail' => 
   array (
     'providers' => 
@@ -50,6 +76,16 @@
     'aliases' => 
     array (
       'Flare' => 'Spatie\\LaravelIgnition\\Facades\\Flare',
+    ),
+  ),
+  'unisharp/laravel-filemanager' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'UniSharp\\LaravelFilemanager\\LaravelFilemanagerServiceProvider',
+    ),
+    'aliases' => 
+    array (
     ),
   ),
 );
