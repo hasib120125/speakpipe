@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   height="19.63159"
+   width="15.19178"
+   version="1.1"
+   viewBox="0 0 15.19178 19.63159"
+   data-name="Слой 1"
+   id="Слой_1">
+  <metadata
+     id="metadata15">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>SP-ICON</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4">
+    <style
+       id="style2">.cls-1{fill:#414142;}</style>
+  </defs>
+  <title
+     id="title6">SP-ICON</title>
+  <rect
+     style="fill:#414142"
+     id="rect8"
+     ry="2.7032299"
+     rx="2.7032299"
+     height="19.63159"
+     width="5.4064698"
+     y="0"
+     x="0"
+     class="cls-1" />
+  <rect
+     style="fill:#414142"
+     id="rect10"
+     ry="2.7032299"
+     rx="2.7032299"
+     height="19.63159"
+     width="5.4064698"
+     y="0"
+     x="9.7853107"
+     class="cls-1" />
+</svg>
