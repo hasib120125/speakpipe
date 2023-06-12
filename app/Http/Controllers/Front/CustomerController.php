@@ -12,6 +12,18 @@ class CustomerController extends Controller
     }
 
     public function messages(){
-        return view('front.customer.messages');
+        return view('front.customer.messages.index');
+    }
+
+    public function messageLibrary(){
+        return view('front.customer.messages.library');
+    }
+
+    public function messageSent(){
+        return view('front.customer.messages.sent');
+    }
+
+    public function messageBookmarks(){
+        return view('front.customer.messages.bookmarks');
     }
 }

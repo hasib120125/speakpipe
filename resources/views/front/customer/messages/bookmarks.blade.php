@@ -5,27 +5,7 @@
         <div class="container">
             <div class="columns main-layout">
                 <div class="column is-narrow is-hidden-mobile">
-                    <aside class="menu is-medium side-nav">
-                        <button class="button is-primary is-medium is-fullwidth record-btn" title="Create a voice channel">
-                            <img src="{{ asset('themes/front/img/site_v8/mic-icon-white.svg') }}" />
-                            Record
-                        </button>
-                        <ul class="menu-list">
-                            <li><a class="is-active" href="/messages">Inbox</a></li>
-                            <li><a href="/messages/library">Channels</a></li>
-                            <li><a href="/messages/sent">Sent</a></li>
-                            <li><a href="/messages/bookmarks">Bookmarked</a></li>
-                        </ul>
-                        <div class="plan-info is-size-6">
-                            <div>Storage used</div>
-                            0 bytes ouf of 100MB
-                            <progress class="progress is-primary" value="0" max=100></progress>
-                            <p>
-                                Free plan
-                                - <a href="/plans">Upgrade</a>
-                            </p>
-                        </div>
-                    </aside>
+                    @include('front.customer.messages.includes.sidebar')
                 </div>
                 <div class="column">
                     <nav class="level is-mobile is-hidden-tablet mobile-panel">

@@ -13,11 +13,11 @@
         <div class="navbar-menu">
             <div class="navbar-end">
                 @if (Auth::guard('customer')->user())
-                    <a class="navbar-item" href="/help">Get started</a>
-                    <a class="navbar-item" href="/messages">hasib.lynkto@gmail.com</a>
-                    <a class="navbar-item" href="/messages">Inbox</a>
+                    <a class="navbar-item" href="{{ route('customer_help') }}">Get started</a>
+                    <a class="navbar-item" href="{{ route('customer_messages') }}">{{ Auth::guard('customer')->user()->email }}</a>
+                    <a class="navbar-item" href="{{ route('customer_messages') }}">Inbox</a>
                     <a class="navbar-item" href="/account/settings/widget">Settings</a>
-                    <a class="navbar-item" href="/signout">Logout</a>
+                    <a class="navbar-item" href="{{ route('logout_customer') }}">Logout</a>
                 @else
                     <div class="navbar-item">
                         <div class="buttons">

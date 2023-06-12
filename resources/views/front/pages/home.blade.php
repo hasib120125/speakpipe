@@ -8,7 +8,7 @@
                     Receive voice messages <br>
                     from your podcast listeners
                 </h1>
-                <a class="button is-primary is-large" href="signup.html">Get started</a>
+                <a class="button is-primary is-large" href="{{ route('customer_signup') }}">Get started</a>
             </div>
 
             <div class="columns is-vcentered feature-section is-flex-direction-row-reverse">
@@ -81,7 +81,7 @@
 
             <div class="box bottom-signup-panel">
                 <h2 class="title">Take the interaction with your listeners to the next level</h2>
-                <a class="button is-primary is-large" href="signup.html">Get started</a>
+                <a class="button is-primary is-large" href="{{ route('customer_signup') }}">Get started</a>
             </div>
         </div>
     </section>

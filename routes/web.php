@@ -21,6 +21,9 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout_customer'
 Route::middleware('auth:customer')->group(function () {
     Route::get('/help', [CustomerController::class, 'help'])->name('customer_help');
     Route::get('/messages', [CustomerController::class, 'messages'])->name('customer_messages');
+    Route::get('/messages/library', [CustomerController::class, 'messageLibrary'])->name('customer_messages_library');
+    Route::get('/messages/sent', [CustomerController::class, 'messageSent'])->name('customer_messages_sent');
+    Route::get('/messages/bookmarks', [CustomerController::class, 'messageBookmarks'])->name('customer_messages_bookmarks');
 });
 
 Route::prefix('admin')->group(function () {
