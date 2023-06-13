@@ -5,21 +5,11 @@
                 <div class="collapse_arrow">
                     <span><i class="lni lni-menu"></i></span>
                 </div>
-              <a href="#"><img src="assets/media/images/logo-new2.png" alt="" ></a>
+              <a href="#"><img src="{{ asset('themes/admin/media/images/speakpipe-logo.svg') }}" alt="" ></a>
             </li>
             <li class="above_mobile">
                 <div class="left_header_widget">
-                    <i class="fas fa-paper-plane"></i> demo Text
-                </div>
-            </li>
-            <li class="above_mobile">
-                <div class="left_header_widget">
-                    <i class="fas fa-paper-plane"></i> demo Text
-                </div>
-            </li>
-            <li class="above_mobile">
-                <div class="left_header_widget">
-                    <i class="fas fa-paper-plane"></i> demo Text
+                    <i class="fas fa-paper-plane"></i> Hello Super Admin
                 </div>
             </li>
         </ul>
@@ -37,7 +27,6 @@
                     </div>
                 </div>
             </li>
-            <!-- <li><i class='bx bx-search' ></i></li> -->
             <li>
                 <div class="dropdown">
                     <button class="btn">
@@ -48,17 +37,18 @@
             <li>
                 <div class="dropdown">
                     <button class="btn">
-                        <!-- <span> <b>John Doe</b>  <br> Admin </span> -->
-                        <img src="assets/media/images/author.png" alt="">
+                        <img src="{{ asset('themes/admin/media/images/author.png') }}" alt="">
                     </button>
                     <div class="dropdown_menu">
                         <ul>
                             <li><a href="#"><i class='bx bx-user'></i> Profile</a></li>
-                            <li><a href="#"><i class='bx bxs-inbox' ></i> Inbox</a></li>
-                            <li><a href="#"><i class='bx bx-task' ></i> Task</a></li>
-                            <li><a href="#"><i class='bx bx-chat' ></i> Chat</a></li>
                             <li><a href="#"><i class="ti-settings"></i> Setting</a></li>
-                            <li><a href="#"><i class="ti-lock"></i> Logout</a></li>
+                            <li>
+                                <a role="button" onclick="document.getElementById('logoutForm').submit()" style="cursor: pointer;"><i class="ti-lock"></i> Logout</a>
+                                <form id="logoutForm" class="" action="{{ route('logout_admin') }}" method="post">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
                         </ul>
                     </div>
                 </div>

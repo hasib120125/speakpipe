@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Front\AuthController;
 use App\Http\Controllers\Front\CustomerController;
+use App\Http\Controllers\Admin\CustomerController as AdminCustomerController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\AuthController as AdminAuthController;
 
@@ -33,6 +34,9 @@ Route::prefix('admin')->group(function () {
 
     Route::middleware('auth:admin')->group(function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('admin_dashboard');
+
+        //Customers
+        Route::get('/customers', [AdminCustomerController::class, 'index'])->name('admin_customer_list');
     });
 });
 

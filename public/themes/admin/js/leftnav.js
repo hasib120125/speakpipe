@@ -6,10 +6,8 @@
 
 
 function navSwitch(selector, listSelector = '.left_nav_list > li', finder = '.left_f_list', childSelector = '', childFinder = '') {
-    // console.log(index);
     $($(selector).toggleClass('open'));
     list = $(listSelector);
-    console.log(list);
     var id = $(selector).data('target');
     var hideCount = 0;
     for (let index = 0; index < list.length; index++) {

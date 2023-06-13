@@ -20,7 +20,7 @@
             <div class="login_container">
                 <div class="login_wrap">
                     <img src="{{ asset('themes/admin/media/images/speakpipe-logo.svg') }}" alt="">
-                    <div class="has-danger">
+                    <div class="has_danger" style="color: red">
                         <div class="form-control-feedback">{{ session('message') }}</div>
                     </div>
 

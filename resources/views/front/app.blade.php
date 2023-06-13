@@ -10,7 +10,7 @@
         <meta name="title" content="SpeakPipe">
         <meta name="description" content="SpeakPipe">
         <link rel="canonical" href="{{ url()->current() }}" />
-        <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+        <link rel="icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon">
         <title>SpeakPipe</title>
         <link rel="stylesheet" href="{{ asset('themes/front/css/main.css') }}">
         <link rel="stylesheet" href="{{ asset('themes/front/css/style.css') }}">

@@ -11,7 +11,11 @@ use Illuminate\Support\Facades\Hash;
 class AuthController extends Controller
 {
     public function login(){
-        return view('admin.auth.login');
+        if(!empty(Auth::guard('admin')->user())){
+            return redirect()->route('admin_dashboard');
+        }else{
+            return view('admin.auth.login');
+        }
     }
 
     public function loginPost(Request $request) {
@@ -27,5 +31,11 @@ class AuthController extends Controller
         }
 
         return redirect()->route('login_admin')->with('message', 'Invalid Password.')->withInput();
+    }
+
+    public function logout() {
+        Auth::guard('admin')->logout();
+
+        return redirect()->route('login_admin');
     }
 }
