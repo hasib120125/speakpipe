@@ -4,9 +4,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Front\AuthController;
 use App\Http\Controllers\Front\CustomerController;
-use App\Http\Controllers\Admin\CustomerController as AdminCustomerController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Front\CustomerWidgetController;
+use App\Http\Controllers\Front\CustomerAccountController;
+use App\Http\Controllers\Front\CustomerVoiceMailController;
+use App\Http\Controllers\Front\CustomerSubscriptionController;
 use App\Http\Controllers\Admin\AuthController as AdminAuthController;
+use App\Http\Controllers\Admin\CustomerController as AdminCustomerController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -19,17 +23,32 @@ Route::get('/account/reset_password', [AuthController::class, 'resetPassword'])-
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout_customer');
 
 //Pages
-Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
-Route::get('/plans', [HomeController::class, 'plans'])->name('plans');
-Route::get('/privacy', [HomeController::class, 'privacy'])->name('privacy');
-Route::get('/voice-recorder', [HomeController::class, 'voiceRecorder'])->name('voice_recorder');
+Route::get('/help', [CustomerController::class, 'help'])->name('customer_help');
+Route::get('/faq', [HomeController::class, 'faq'])->name('faq_page');
+Route::get('/plans', [HomeController::class, 'plans'])->name('plans_page');
+Route::get('/privacy', [HomeController::class, 'privacy'])->name('privacy_page');
+Route::get('/voice-recorder', [HomeController::class, 'voiceRecorder'])->name('voice_recorder_page');
 
 Route::middleware('auth:customer')->group(function () {
-    Route::get('/help', [CustomerController::class, 'help'])->name('customer_help');
+    //Messages
     Route::get('/messages', [CustomerController::class, 'messages'])->name('customer_messages');
     Route::get('/messages/library', [CustomerController::class, 'messageLibrary'])->name('customer_messages_library');
     Route::get('/messages/sent', [CustomerController::class, 'messageSent'])->name('customer_messages_sent');
     Route::get('/messages/bookmarks', [CustomerController::class, 'messageBookmarks'])->name('customer_messages_bookmarks');
+
+    //Settings Wedget
+    Route::get('/account/settings/widget', [CustomerWidgetController::class, 'settingsWidget'])->name('settings_wedget');
+
+    //Settings voicemail-page
+    Route::get('/account/settings/voicemail-page', [CustomerVoiceMailController::class, 'settingsVoiceMail'])->name('settings_voicemail_page');
+    
+    
+    //Account Settings
+    Route::get('/account/settings', [CustomerAccountController::class, 'accountSettings'])->name('account_settings');
+
+    //Account Subscription
+    Route::get('/account/subscription', [CustomerSubscriptionController::class, 'accountSubscription'])->name('account_subscription');
+
 });
 
 Route::prefix('admin')->group(function () {
