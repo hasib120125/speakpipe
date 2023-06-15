@@ -18,6 +18,11 @@ Route::post('/signup/post', [AuthController::class, 'signupPost'])->name('custom
 Route::get('/account/reset_password', [AuthController::class, 'resetPassword'])->name('customer_reset_password');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout_customer');
 
+//Pages
+Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
+Route::get('/plans', [HomeController::class, 'plans'])->name('plans');
+Route::get('/privacy', [HomeController::class, 'privacy'])->name('privacy');
+Route::get('/voice-recorder', [HomeController::class, 'voiceRecorder'])->name('voice_recorder');
 
 Route::middleware('auth:customer')->group(function () {
     Route::get('/help', [CustomerController::class, 'help'])->name('customer_help');

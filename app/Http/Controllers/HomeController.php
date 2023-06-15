@@ -15,4 +15,8 @@ class HomeController extends Controller
             return view('front.pages.home');
         }
     }
+
+    public function faq(){
+        return view('front.pages.faq');
+    }
 }
