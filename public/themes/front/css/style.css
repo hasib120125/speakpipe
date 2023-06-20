@@ -1,0 +1,1225 @@
+ 
+ /*----------- 010_base.css -----------*/
+
+
+html{
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.wave-background{
+    background-image: url("../img/site_v8/sound-bg.jpg");
+    background-position:  -350px center;
+    background-repeat: no-repeat;
+}
+
+.debug-size-box{
+    position: absolute;
+    top: 0;
+    left: 20%;
+    background-color: #eee;
+    display: block;
+    font-size: 10px;
+    padding: 0 3px;
+    z-index: 888888;
+}
+
+.debug-update-notify{
+    position: absolute;
+    left: 20px;
+    top:3px;
+    display: none;
+    background-color: red;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 0 3px;
+}
+
+.navbar-burger span{
+    height:  2px;
+    width:  18px;
+}
+
+.navbar-menu a,
+.menu-list a{
+    text-decoration: none;
+}
+
+.button{
+    text-decoration: none;
+}
+
+#mobile-menu-box .navbar-dropdown{
+    display: none;
+}
+
+.auth-form{
+    max-width: 470px;
+}
+
+#recording-page .recording-duration,
+#recording-page .recording-duration{
+    font-weight: 300;
+}
+
+.playbar::before{
+    content: "";
+    height: 4px;
+    display: block;
+    background-color: #efefef;
+    width: 100%;
+}
+
+.playbar span{
+    display: block;
+    height: 4px;
+    margin-top: -4px;
+    background-color: #cdcdcd;
+    z-index: 2;
+    position: relative;
+    width: 0;
+}
+
+.playbar span::after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #e33600;
+    background-color: #e64f1d;
+    cursor: pointer;
+    right: -16px;
+    top: -6px;
+    position: absolute;
+}
+
+.column .playbar{
+    margin-right: 11px;
+}
+
+
+.playback-controls button{
+    background-color: transparent;
+    border: 0;
+    color: #787878;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 5px;
+    display: inline-block;
+    width: 22px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.playback-controls button:hover {
+    background-color: #eee;
+}
+
+.playback-controls .step-back-btn {
+    background-image: url("../../img/site_v8/player/to-back.svg");
+}
+
+.playback-controls .step-forward-btn {
+    background-image: url("../../img/site_v8/player/to-forward.svg");
+}
+
+.playback-controls .playback-speed-btn{
+    font-size: 1em;
+}
+
+.dialog-close-button{
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    left: auto !important;
+    cursor: pointer;
+    display: inline;
+    width: 22px;
+    height: 22px;
+    z-index: 2147482114;
+    background: url("data:image/svg+xml;base64,PHN2ZyBpZD0i0KHQu9C+0LlfMSIgZGF0YS1uYW1lPSLQodC70L7QuSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMi42NzcxNyAyMi42NzcxNyI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiM0MTQxNDI7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5TUC1JQ09OPC90aXRsZT48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xOC4wNywxOC43ODg0M2EuOTk2NzYuOTk2NzYsMCwwLDEtLjcwNy0uMjkzTDQuNDYzNTQsNS41OTZBLjk5OTg5Ljk5OTg5LDAsMCwxLDUuODc3Niw0LjE4MkwxOC43NzcsMTcuMDgxNGExLDEsMCwwLDEtLjcwNywxLjcwN1oiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik01LjE3MDU3LDE4Ljc4ODQzYTEsMSwwLDAsMS0uNzA3LTEuNzA3TDE3LjM2Myw0LjE4MkEuOTk5ODkuOTk5ODksMCwwLDEsMTguNzc3LDUuNTk2TDUuODc3NiwxOC40OTU0NkEuOTk2NzYuOTk2NzYsMCwwLDEsNS4xNzA1NywxOC43ODg0M1oiLz48L3N2Zz4=") no-repeat scroll 0 0 transparent;
+}
+
+.dialog-close-button:hover{
+    background-color: #eee;
+}
+
+#record-outgoing-dlg .modal-content{
+    width: 95%;
+    max-width: 380px;
+    min-height: 455px;
+    margin: 0;
+    margin-right: 1px;
+}
+
+#record-outgoing-dlg iframe{
+    width: 100%;
+    height: 450px;
+}
+
+.audiopage .play-pause-btn,
+.audioembed .play-pause-btn{
+    background-color: #efefef;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 0;
+    position: relative;
+}
+
+
+.audiopage .play-icon,
+.audioembed .play-icon{
+    background-repeat: no-repeat;
+    background-image: url("../../img/site_v8/player/play.svg");
+}
+
+.audiopage .pause-icon,
+.audioembed .pause-icon{
+    background-repeat: no-repeat;
+    background-image: url("../../img/site_v8/player/pause.svg");
+} 
+
+
+
+ 
+ /*----------- 020_mailbox.css -----------*/
+
+
+.mailbox .level-item .unselect-all-btn{
+    display: none;
+}
+
+.mailbox .section a{
+    text-decoration: none;
+}
+
+.mailbox .media,
+.mailbox .media + .media{
+    border-bottom: 1px solid #eee;
+    border-top: none;
+    padding: 17px 13px 20px;
+}
+
+.mailbox .media + .media{
+    margin: 0;
+}
+
+.mailbox .audio-item .button{
+    background-color: transparent;
+}
+
+.mailbox .audio-item .button:hover{
+    background-color: white;
+}
+
+.mailbox .unplayed-audio{
+    background-color: #f9f9f9;
+}
+
+.mailbox .unplayed-audio .author-info{
+    font-weight: 500;
+}
+
+.mailbox .media-content{
+    overflow: visible;
+}
+
+.mailbox .media-content .level{
+    margin-bottom: 0;
+}
+
+.mailbox .list-title-mobile{
+    text-align: left;
+    padding: 10px 13px 10px;
+    border-top: 1px solid #eee;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.mailbox .audio-title{
+    font-size: 1.3rem;
+}
+
+.mailbox .author-info{
+    font-size: 1.3rem;
+}
+
+.mailbox .author-info a{
+    color: #4a4a4a;
+
+}
+
+.mailbox .author-email::before{
+    content: '(';
+    color: #999;
+}
+
+.mailbox .author-email::after{
+    content: ')';
+    color: #999;
+}
+
+.mailbox .side-nav .record-btn{
+    margin-bottom: 18px;
+}
+
+.mailbox .side-nav .record-btn img{
+    margin-right: 8px;
+}
+
+.mailbox .mobile-panel{
+    margin: 4px 13px 10px !important;
+}
+
+.mailbox .mobile-panel .record-btn img{
+    margin-right: 5px;
+    height: 20px;
+}
+
+.mailbox .service-btns{
+    margin-top: 8px;
+}
+
+.mailbox .audio-action .button{
+    border: none;
+    padding: 0 12px;
+    padding-top: 0 !important;
+    font-size: 0.9rem;
+    /*opacity: 0.8;*/
+}
+
+.mailbox .service-btns .button:hover{
+    background-color: whitesmoke;
+    opacity: 1;
+}
+
+.mailbox .service-btns .button img{
+    height: 25px;
+}
+
+.mailbox .service-btns .button span{
+    margin-left: 5px;
+}
+
+.mailbox .play-pause-btn{
+    padding: 0;
+    position: relative;
+}
+
+.mailbox .play-icon,
+.mailbox .pause-icon,
+.mailbox .load-icon {
+    border: 0;
+    width: 28px;
+    height: 40px;
+    background-size: 28px 40px;
+    background-color: transparent;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.mailbox .unplayed-audio .play-icon,
+.mailbox .unplayed-audio .pause-icon,
+.mailbox .unplayed-audio .load-icon {
+    opacity: 1;
+}
+
+.mailbox .play-icon {
+    background-image: url("../../img/site_v8/player/play-g.svg");
+}
+
+.mailbox .pause-icon{
+    background-image: url("../../img/site_v8/player/pause-g.svg");
+}
+
+.mailbox .player-container{
+    display: none;
+    padding: 10px 0 0;
+}
+
+.mailbox .playback-time{
+    display: none;
+}
+
+.mailbox .playback-time::after{
+    content: " / ";
+}
+
+.mailbox .reply-btn img{
+    margin-right: 5px;
+    opacity: 0.6;
+}
+
+.mailbox .reply-btn:hover img{
+    opacity: 1;
+}
+
+.mailbox .reply-container{
+    display: none;
+    margin-top: 20px;
+}
+
+.mailbox .reply-container,
+.mailbox .reply-container iframe{
+    height: 200px;
+}
+
+.mailbox .reply-container iframe{
+    max-width: 500px;
+    width: 100%;
+}
+
+.mailbox .audio-item-chkbox{
+    margin-top: 15px;
+}
+
+.mailbox .pagination-box{
+    margin-top: 60px;
+    text-align: center;
+}
+
+.mailbox .plan-info{
+    margin-top: 50px;
+}
+
+.mailbox .bookmark-btn{
+    margin-left: 15px;
+    width: 21px;
+    height: 19px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 21px;
+    background-color:
+    transparent;
+    border: 0;
+    vertical-align: middle;
+}
+
+.mailbox .star-icon{
+    background-image: url("../../img/site_v8/star.svg");
+}
+
+.mailbox .star-active-icon{
+    background-image: url("../../img/site_v8/star-active.svg");
+}
+
+.mailbox .modal-content .title{
+    font-size: 1.5rem;
+    margin-bottom: 0.9rem;
+}
+
+.mailbox .dlg-body{
+    position: relative;
+}
+
+.mailbox .dlg-loading{
+    position: absolute;
+    z-index: 10000;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    left: 0;
+    top: 0;
+}
+
+.mailbox .dlg-content{
+    visibility: visible;
+}
+
+.mailbox #share-audio-dlg .modal-content{
+    width: 95%;
+    max-width: 640px;
+}
+
+.mailbox .audio-embed-container iframe{
+    width: 100%;
+    height: 240px;
+    /*border: 1px solid #eee;*/
+}
+
+.mailbox .edit-note-form{
+    display: none;
+}
+
+.mailbox .manage-items-panel{
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 100;
+    background-color: #fff;
+    width: 100%;
+    padding: 10px;
+    display: none;
+}
+
+.mailbox .manage-items-panel .select-all-btn{
+    display: inline-flex !important;
+}
+
+
+.mailbox .speakpipe-container{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.mailbox .speakpipe-container .wgt-main-btn,
+.mailbox .speakpipe-container .wgt-secondary-btn{
+    padding: 1rem 1rem;
+    font-size: 20px;
+}
+
+.mailbox .speakpipe-container #start-recording-page .dlg-msg{
+    max-height: 8rem;
+}
+
+.mailbox .speakpipe-container .send-email-hint{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .mailbox .section {
+        padding: 0.2em;
+    }
+
+    .mailbox .main-layout{
+        margin: 0;
+    }
+
+    .mailbox .main-layout > .column{
+        padding: 0;
+    }
+
+    .mailbox .speakpipe-container .dlg-page{
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .mailbox .mobile-panel .input{
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .mailbox .mobile-panel .input{
+        width: 130px;
+    }
+
+    .mailbox #record-outgoing-dlg .modal-content{
+        max-height: none;
+    }
+
+    .mailbox #record-outgoing-dlg .modal-content .box{
+        padding: 0.8rem;
+    }
+} 
+
+
+
+ 
+ /*----------- 030_settings.css -----------*/
+
+
+.settings .field{
+    min-width: 50%;
+}
+
+.settings .card{
+    margin-bottom: 20px;
+}
+
+.settings #side-button,
+.settings #widget-appearance{
+    overflow: visible;
+}
+
+.settings .input{
+    max-width: 350px;
+}
+
+.settings .textarea{
+    max-width: 400px;
+    min-width: auto;
+}
+
+.settings textarea.dialog-embed-code{
+    max-width: none;
+    height: 280px;
+}
+
+.settings textarea.inline-embed-code{
+    max-width: none;
+
+}
+
+.settings .colorpicker{
+    padding: 3px;
+    width: 60px;
+    height: 30px;
+    background-color: #eee;
+    display: block;
+}
+
+.settings .colorpicker .color-value{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.colorpicker .layout_default .picker_editor{
+    width: 5rem !important;
+}
+
+.colorpicker .layout_default.picker_wrapper input{
+    font-size: 0.8rem !important;
+}
+
+.settings .dropdown .button{
+    padding-right: 2.5em;
+}
+
+.settings .has-margin-top-10{
+    margin-top: 10px;
+}
+
+.settings .has-margin-top-20{
+    margin-top: 20px;
+}
+
+.settings .has-margin-left-10{
+    margin-left: 10px;
+}
+
+.settings .widget-list li a{
+    width: 200px;
+    font-size: 1rem;
+/*    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+*/
+}
+
+.settings .extra-widget{
+    display: none;
+}
+
+.settings .less-widgets{
+    display: none;
+}
+
+
+.settings .change-plan-form .button{
+    margin-right: 10px;
+} 
+
+
+
+ 
+ /*----------- 040_getstarted.css -----------*/
+
+
+.getstarted .get-started-container{
+    max-width: 900px;
+}
+
+.getstarted .steps-list{
+    background-color: #f9f9f9;
+    font-size: 1.2em;
+}
+
+.getstarted .steps-list li{
+    padding: 15px 30px;
+}
+
+.getstarted .show-widget-btn img{
+    margin-right: 8px;
+}
+
+.getstarted .card-header-title{
+    font-size: 1.5em;
+}
+
+.getstarted .collapsed-card{
+    background-color: #f9f9f9;
+    padding: 0.75rem;
+    margin: 10px 0;
+    color: #666;
+}
+
+.getstarted .card{
+    box-shadow: none;
+    border: 1px solid #ddd;
+}
+
+.getstarted .input {
+    max-width: 350px;
+}
+
+.getstarted #create-vm-page-card{
+    display: block;
+}
+
+.getstarted .collapsed-title{
+    display: none;
+    background-color: #f9f9f9;
+    padding: 0.75rem;
+    margin: 10px 0;
+    color: #666;
+    cursor: pointer;
+}
+
+.getstarted .is-collapsed-card .card{
+    display: none;
+}
+
+.getstarted .is-collapsed-card .collapsed-title{
+    display: block;
+}
+
+
+.getstarted #create-vm-page-card .button img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.getstarted #record-first-outgoing-page .start-rec-btn{
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+    padding: 4% 6%;
+    border-radius: 8px;
+
+}
+
+.getstarted .widget-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0px auto;
+    background-color: transparent;
+
+}
+
+.getstarted .speakpipe-container .dlg-page{
+    margin-top: 0;
+}
+
+.getstarted .speakpipe-container .dlg-page .send-email-hint{
+    display: none;
+}
+
+.getstarted .speakpipe-container .wgt-main-btn,
+.getstarted .speakpipe-container .wgt-secondary-btn{
+    min-width: 100px;
+    padding: 4% 6%;
+} 
+
+
+
+ 
+ /*----------- 050_audio_page.css -----------*/
+
+
+.audiopage .container{
+    padding: 5px 10px;
+}
+
+.audiopage .powered-by img {
+    width: 80px;
+    margin-left: 2px;
+    vertical-align: middle;
+}
+
+.audiopage .title{
+    margin: 4rem 0.25rem 0.5rem !important;
+}
+
+.audiopage .audio-info a{
+    color: #666;
+    text-decoration: underline;
+}
+
+.audiopage .play-pause-btn{
+    width: 120px;
+    height: 120px;
+}
+
+.audiopage .play-icon,
+.audiopage .pause-icon{
+  background-position: 40px center;
+  background-size: 50px;
+}
+
+.audiopage .pause-icon{
+    background-position: 35px center;
+}
+
+.audiopage .playbtn-container{
+    width: 120px;
+    height: 120px;
+    white-space: nowrap;
+    overflow: visible;
+    margin: 1.8rem auto 1rem;
+}
+
+.audiopage .playbtn-container .play-pause-btn {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.audiopage .playback-controls{
+    display: none;
+    /*display: inline-block;*/
+    vertical-align: middle;
+    margin-left: 1rem;
+}
+
+.audiopage .playback-controls button {
+    width: 35px;
+    height: 30px;
+    margin-right: 1px;
+}
+
+.audiopage .column .playbar{
+    margin-left: 11px;
+}
+
+.audiopage .reply-btn{
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+}
+
+.audiopage .reply-btn img{
+    margin-right: 8px;
+}
+
+.audiopage .reply-container {
+    height: 450px;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color:
+    transparent;
+    display: none;
+}
+
+.audiopage .dlg-page{
+    margin-top: 2%;
+}
+
+.audiopage .more-btn{
+    margin-top: -1px;
+}
+
+.audiopage .more-btn a{
+    background-color: #efefef;
+    padding: 0 8px;
+    max-width: 50px;
+    border-radius: 3px;
+    color: #666;
+    margin-left: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    body.audiopage{
+        background: none !important;
+    }
+
+    .audiopage .playback-controls button{
+        display: block;
+    }
+
+    .audiopage .title{
+        margin-top: 3rem !important;
+    }
+}
+
+
+
+@media screen and (max-width: 340px) {
+    .audiopage .wgt-main-btn,
+    .audiopage .wgt-secondary-btn{
+        margin-bottom: 4%;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .audiopage .title{
+        font-size: 2rem !important;
+    }
+} 
+
+
+
+ 
+ /*----------- 060_audio_embed.css -----------*/
+
+
+body.audioembed{
+    padding-top: 1.6rem;
+    padding-bottom: 1rem;
+    overflow-y: hidden;
+}
+
+.audioembed .title{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 1.1rem !important;
+    line-height: 1.3;
+}
+
+.audioembed .main-container{
+    padding-top: 0;
+    padding-right: 1.8rem;
+    padding-left: 1.8rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.audioembed .bottom-panel{
+    padding-top: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 0;
+}
+
+.audioembed .bottom-panel .audio-stats{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.audioembed .media-content{
+    overflow-x: visible !important;
+}
+
+.audioembed .play-pause-btn{
+    width: 70px;
+    height: 70px;
+    background-position: 24px center;
+    background-size: 30px;
+}
+
+.audioembed .pause-icon{
+    background-position: 21px center;
+}
+
+.audioembed .playback-controls{
+    font-size: 0; /* remove spaces between buttons */
+}
+
+.audioembed .playback-controls button{
+    background-size: 15px;
+    margin: 0;
+}
+
+.audioembed .playback-controls .playback-speed-btn{
+    font-size: 0.8rem;
+    width: auto;
+}
+
+.audioembed .column .playback-time{
+    display: none;
+    margin-right: 11px;
+}
+
+.audioembed .replies-count:before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-image: url("../../img/site_v8/player/mic-g.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    opacity: 0.5;
+}
+
+.audioembed .plays-count:before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-image: url("../../img/site_v8/player/play.svg");
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-position: 3px center;
+    border: 2px solid #646462;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    opacity: 0.5;
+    margin-right: 5px;
+}
+
+.audioembed .reply-btn img{
+    margin-right: 8px;
+    height: 20px;
+}
+
+.audioembed .speakpipe-container{
+    padding: 0 0.6rem;
+}
+
+.audioembed .powered-by{
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    font-size: 0.8rem;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.audioembed .powered-by img {
+    width: 75px;
+    margin-left: 2px;
+    vertical-align: middle;
+}
+
+
+
+@media screen and (max-height:200px) {
+    body.audioembed{
+        padding-top: 0.6rem;
+        padding-bottom: 0.7rem;
+    }
+
+    .audioembed .main-container{
+        padding-top: 0;
+        padding-right: 0.7rem;
+        padding-left: 0.7rem;
+        padding-bottom: 0.6rem;
+    }
+
+    .audioembed .bottom-panel{
+        padding-top: 0.7rem;
+        padding-right: 0.7rem;
+        padding-left: 0.7rem;
+        padding-bottom: 0;
+    }
+
+    .audioembed .title{
+        margin-bottom: 0.7rem !important;
+        line-height: 1.2;
+    }
+
+
+    .audioembed .play-pause-btn {
+        width: 60px;
+        height: 60px;
+        background-position: 19px center;
+        background-size: 27px;
+    }
+
+    .audioembed .pause-icon{
+        background-position: 17px center;
+    }
+
+    .audioembed .audio-info{
+        font-size: 0.8em;
+
+    }
+
+    .audioembed .powered-by{
+        right: 15px;
+        top: auto;
+        bottom: 4px;
+    }
+}
+
+@media screen and (max-height:150px) {
+    body.audioembed{
+        padding-top: 0.3rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .audioembed .main-container{
+        padding-top: 0;
+        padding-right: 0.6rem;
+        padding-left: 0.6rem;
+        padding-bottom: 0;
+        border: none;
+    }
+
+    .audioembed .bottom-panel{
+        padding-top: 0.5rem;
+        padding-right: 0.6rem;
+        padding-left: 0.6rem;
+        padding-bottom: 0;
+    }
+
+    .audioembed .bottom-panel .columns{
+        align-items: start !important;
+    }
+
+    .audioembed .title{
+        margin-bottom: 0.4rem !important;
+        font-weight: 500 !important;
+        font-size: 1.3rem !important;
+    }
+
+    .audioembed .author-info{
+        font-size: 0.9rem;
+    }
+
+    .audioembed .play-pause-btn {
+        width: 44px;
+        height: 44px;
+        background-position: 15px center;
+        background-size: 19px;
+    }
+
+    .audioembed .pause-icon{
+        background-position: 13px center;
+    }
+
+    .audioembed .player-container{
+        line-height: 1;
+        font-size: 0.8em;
+    }
+
+    .audioembed .playback-controls{
+        display: none;
+    }
+
+    .audioembed .reply-btn{
+        font-size: 0.95rem;
+        font-weight: 500;
+        height: auto;
+        padding: 0.1em 1em 0.1em;
+    }
+
+    .audioembed .reply-btn img{
+        margin-right: 8px;
+        height: 16px;
+    }
+
+    .audioembed .audio-stats,
+    .audioembed .audio-info{
+        font-size: 0.7em;
+    }
+
+    .audioembed .plays-count{
+        margin-left: 0.4rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .audioembed .main-container{
+        padding-left: 0.9rem;
+        padding-right: 0.9rem;
+    }
+
+    .audioembed .bottom-panel{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .audioembed .is-hidden-small-mobile{
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .audioembed .is-small-mobile {
+        display: flex;
+    }
+}
+
+
+.audioembed .is-small-mobile {
+    display: flex;
+}
+
+/*----------- 070_free_recorder.css -----------*/
+.free-recorder .speakpipe-container{
+    margin-top: 5%;
+}
+
+.free-recorder #start-recording-page .wgt-main-btn{
+    width: 50%;
+}
+
+.free-recorder #start-recording-page .dlg-msg{
+    margin: 0.8rem;
+}
+
+.free-recorder #embed-recording-page textarea{
+    height: 100px;
+    font-size: 0.9rem;
+}
+
+.free-recorder .dlg-page{
+    margin: 0;
+}
+
+.free-recorder .page-note{
+    margin-top: 30px;
+    font-size: 16px;
+    color: #333;
+}
+
+.free-recorder .wgt-main-btn,
+.free-recorder .wgt-secondary-btn{
+    padding: 4% 4%;
+    font-size: 1.3rem;
+}
+
+.free-recorder .wgt-secondary-btn{
+    margin-left: 3%;
+}
+
+.free-recorder .rec-wave-container{
+    margin-bottom: 35px;
+}
+
+.free-recorder #recording-page .mic-img{
+    margin-top: 2%;
+}
+
+.free-recorder #rec-details-page .dlg-msg{
+    margin: 0 0 2em;
+    margin-right: 0.8em;
+}
+
+.free-recorder #rec-details-page .dlg-msg a{
+    font-size: 0.9em;
+}
+
+.free-recorder #rec-details-page .storage-warn{
+    margin: 0 0 2%;
+}
+
+.free-recorder .wgt-audio-info{
+    width: 90%;
+}
+
+.free-recorder .widget-powered-by{
+    display: none;
+}
+
+.free-recorder .storage-warn{
+    text-align: left;
+    font-size: 1rem;
+    margin: 20px 5% 0;
+}
+ 
+
+
+

@@ -11,7 +11,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Sanctum\HasApiTokens;
 use Kirschbaum\PowerJoins\PowerJoins;
 
-class Admin extends Authenticatable
+class Customer extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, PowerJoins, SoftDeletes;
 
@@ -21,6 +21,7 @@ class Admin extends Authenticatable
         'email',
         'password',
         'account_id',
+        'plan_id',
         'status',
         'receive_offers',
         'reset_token',

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('password');
             $table->string('account_id')->nullable();
+            $table->unsignedInteger('plan_id')->nullable();
             $table->boolean('status')->default(0)->nullable();
             $table->boolean('receive_offers')->default(0)->nullable();
             $table->text('reset_token')->nullable();
