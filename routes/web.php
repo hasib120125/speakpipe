@@ -3,10 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Front\AuthController;
+use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Front\CustomerController;
-use App\Http\Controllers\Admin\CustomerController as AdminCustomerController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\AuthController as AdminAuthController;
+use App\Http\Controllers\Admin\CustomerController as AdminCustomerController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
