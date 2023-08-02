@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Front\AuthController;
+use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Front\CustomerController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Front\CustomerWidgetController;
@@ -61,6 +62,16 @@ Route::prefix('admin')->group(function () {
 
         //Customers
         Route::get('/customers', [AdminCustomerController::class, 'index'])->name('admin_customer_list');
+
+        //Banners
+        Route::get('/section/one/banner', [BannerController::class, 'sectionOne'])->name('admin_section_one_banner');
+        Route::post('/section/one/banner/save', [BannerController::class, 'sectionOneSave'])->name('admin_section_one_banner_save');
+        Route::get('/section/two/banner', [BannerController::class, 'sectionTwo'])->name('admin_section_two_banner');
+        Route::post('/section/two/banner/save', [BannerController::class, 'sectionTwoSave'])->name('admin_section_two_banner_save');
+        Route::get('/section/three/banner', [BannerController::class, 'sectionThree'])->name('admin_section_three_banner');
+        Route::post('/section/three/banner/save', [BannerController::class, 'sectionThreeSave'])->name('admin_section_three_banner_save');
+        Route::get('/section/four/banner', [BannerController::class, 'sectionFour'])->name('admin_section_four_banner');
+        Route::post('/section/four/banner/save', [BannerController::class, 'sectionFourSave'])->name('admin_section_four_banner_save');
     });
 });
 
