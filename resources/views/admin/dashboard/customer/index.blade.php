@@ -29,7 +29,7 @@
                                         <td>{{ $customer->account_id }}</td>
                                         <td>{{ $customer->plan_id }}</td>
                                         <td class="white_space_nowrap ">
-                                            <a href="/vendor/live-videos/17"
+                                            <a href="#!"
                                                 class="btn btn_info">Details
                                             </a> &nbsp; 
                                             <button class="btn btn_danger">Stop</button>

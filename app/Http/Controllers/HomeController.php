@@ -19,4 +19,16 @@ class HomeController extends Controller
     public function faq(){
         return view('front.pages.faq');
     }
+
+    public function plans(){
+        return view('front.pages.plans');
+    }
+
+    public function privacy(){
+        return view('front.pages.privacy');
+    }
+
+    public function voiceRecorder(){
+        return view('front.pages.voice-recorder');
+    }
 }

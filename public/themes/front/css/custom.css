@@ -218,3 +218,110 @@ footer a{
 .side-nav .record-btn {
     margin-bottom: 18px;
 }
+
+h3 {
+    margin: 13px 0 7px !important;
+    font-size: 1.20rem;
+    font-weight: 600;
+    line-height: 1.125;
+    color: #363636;
+}
+
+.option-box{
+    margin-bottom: 20px;
+}
+
+
+.option-box h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.option-box a{
+    font-size: 1.2rem;
+}
+
+.billing-period{
+    margin-bottom: 40px;
+}
+
+.billing-period a{
+    text-decoration: none;
+}
+
+.billing-period .button{
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.billing-period sup{
+    color: #e64f1d;
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    top: -0.4em;
+    margin-left: 3px;
+}
+
+.plan-info{
+    border: 1px solid #eee;
+    padding: 0.75em 1.5em;
+    border-radius: 5px;
+}
+
+.plan-info .button{
+    margin: 30px 0 10px;
+    text-decoration: none;
+}
+
+.plan-name{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #e64f1d;
+    font-weight: 400;
+}
+
+.plan-price{
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.plan-features li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+    color: #222;
+}
+
+.price-billed-monthly{
+    display: none;
+}
+
+.selected-box{
+    border-color: #e64f1d !important;
+    background-color: rgba(230, 79, 29, 0.15);
+}
+
+.selected-box span{
+    /*font-weight: bold;*/
+    color: #000;
+
+}
+
+h4 {
+    margin: 13px 0 7px !important;
+    font-size: 1.20rem;
+    font-weight: 600;
+    line-height: 1.125;
+    color: #363636;
+}
+
+.feature-hint{
+    font-size: 0.8rem;
+}
+
+.money_guarantee{
+    margin-bottom: 1.5rem !important;
+}

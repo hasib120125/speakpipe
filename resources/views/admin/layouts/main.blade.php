@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <div id="wrapper" class="vertical_collpsed">
-        <div class="mobile_overlay below_mobile"></div>
+    <div id="wrapper">
+        <div class="mobile_overlay below_mobile open"></div>
         @include('admin.partials.header')
         @include('admin.partials.sidebar')
         <div id="content_wrap">
