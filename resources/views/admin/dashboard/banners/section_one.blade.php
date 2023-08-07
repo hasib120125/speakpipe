@@ -24,12 +24,15 @@
                         </div>
                         <div class="form-group">
                             <label>Description</label>
-                            <textarea rows="10" cols="50" name="description" class="form_global"></textarea>
+                            <textarea rows="10" cols="50" name="description" class="form_global">{{ !empty($banner->description) ? $banner->description : '' }}</textarea>
                         </div>
                         <div class="form-group ">
                             <div class="form_radio">
-                                <input type="radio" id="Checkme1" name="radio">
-                                <label for="Checkme1">Active</label>
+                                <input type="radio" id="activeStatus" name="status" value="1" {{ empty(old('status')) ? ($banner->status == 1 ? 'checked' : '') : (old('status') == 1 ? 'checked' : '') }}>
+                                <label for="activeStatus">Active</label>
+
+                                <input type="radio" id="inactiveStatus" value="0" name="status" {{ empty(old('status')) ? ($banner->status == 0 ? 'checked' : '') : (old('status') == 0 ? 'checked' : '') }}>
+                                <label for="inactiveStatus">Inactive</label>
                             </div>
                         </div>
                         <div class="d_flex_end">
